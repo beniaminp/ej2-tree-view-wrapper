@@ -1,0 +1,10 @@
+<div class="control-section" style="overflow:hidden;">
+
+        <app-tree-view-wrapper [fields]="field">
+            <ng-template #template let-data>
+                <div (click)="nodeSelected(data)">{{data.details}}</div>
+            </ng-template>
+        </app-tree-view-wrapper>
+
+</div>
+

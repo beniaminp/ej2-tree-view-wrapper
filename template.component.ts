@@ -1,0 +1,1347 @@
+import { Component, Inject, ViewEncapsulation } from '@angular/core';
+
+/**
+ * TreeView drag and drop sample
+ */
+@Component({
+    selector: 'control-content',
+    templateUrl: 'template.html',
+    styleUrls: ['template.css'],
+    encapsulation: ViewEncapsulation.None
+})
+export class TemplateTreeViewComponent {
+
+   public localData: Object[] = [  
+   {  
+      "entityId":547788,
+      "hlevel":33,
+      "secondEntityId":null,
+      "secondHlevel":null,
+      "parentEntityId":null,
+      "parentHlevel":null,
+      "details":"CLEMENTINA ABIABOERU",
+      "appContextId":1063,
+      "selected":false,
+      "hierarchyDynamicDTOList":[  
+         {  
+            "entityId":494733,
+            "hlevel":2,
+            "secondEntityId":null,
+            "secondHlevel":null,
+            "parentEntityId":547788,
+            "parentHlevel":33,
+            "details":"CLEMENTINA ABIABOERU 123 ABIABOERU  ABIABOERU",
+            "appContextId":8,
+            "selected":true,
+            "hierarchyDynamicDTOList":[  
+               {  
+                  "entityId":null,
+                  "hlevel":4,
+                  "secondEntityId":null,
+                  "secondHlevel":null,
+                  "parentEntityId":494733,
+                  "parentHlevel":2,
+                  "details":"accounts",
+                  "appContextId":null,
+                  "selected":null,
+                  "hierarchyDynamicDTOList":[  
+                     {  
+                        "entityId":null,
+                        "hlevel":4,
+                        "secondEntityId":null,
+                        "secondHlevel":null,
+                        "parentEntityId":494733,
+                        "parentHlevel":4,
+                        "details":"Personal Loan with Mortgage",
+                        "appContextId":null,
+                        "selected":null,
+                        "hierarchyDynamicDTOList":[  
+                           {  
+                              "entityId":570916,
+                              "hlevel":4,
+                              "secondEntityId":1542811,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3203_1 - 72 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":1,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570949,
+                              "hlevel":4,
+                              "secondEntityId":1542844,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3236_1 - 132 RON Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":1,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570952,
+                              "hlevel":4,
+                              "secondEntityId":1542847,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3239_1 - 90 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":1,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570957,
+                              "hlevel":4,
+                              "secondEntityId":1542852,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3244_1 - 82 RON Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":1,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           }
+                        ],
+                        "expanded":true,
+                        "groupingId":1,
+                        "parentGroupingId":null,
+                        "colorCode":"4_0",
+                        "iconCode":null,
+                        "appHierarchyConfigId":6
+                     },
+                     {  
+                        "entityId":null,
+                        "hlevel":4,
+                        "secondEntityId":null,
+                        "secondHlevel":null,
+                        "parentEntityId":494733,
+                        "parentHlevel":4,
+                        "details":"Credit Card",
+                        "appContextId":null,
+                        "selected":null,
+                        "hierarchyDynamicDTOList":[  
+                           {  
+                              "entityId":570918,
+                              "hlevel":4,
+                              "secondEntityId":1542813,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3205_6 - 5676.6694 RON Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":6,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570919,
+                              "hlevel":4,
+                              "secondEntityId":1542814,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3206_6 - 4931.742 RON Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":6,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570921,
+                              "hlevel":4,
+                              "secondEntityId":1542816,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3208_6 - 3164.853 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":6,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570922,
+                              "hlevel":4,
+                              "secondEntityId":1542817,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3209_6 - 5955.3188 RON Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":6,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570926,
+                              "hlevel":4,
+                              "secondEntityId":1542821,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3213_6 - 4610.4141 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":6,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570928,
+                              "hlevel":4,
+                              "secondEntityId":1542823,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3215_6 - 2183.9071 RON Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":6,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570948,
+                              "hlevel":4,
+                              "secondEntityId":1542843,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3235_6 - 2323.8279 RON Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":6,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570950,
+                              "hlevel":4,
+                              "secondEntityId":1542845,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3237_6 - 4819.9614 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":6,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570955,
+                              "hlevel":4,
+                              "secondEntityId":1542850,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3242_6 - 3617.0118 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":6,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570956,
+                              "hlevel":4,
+                              "secondEntityId":1542851,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3243_6 - 3829.6954 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":6,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570962,
+                              "hlevel":4,
+                              "secondEntityId":1542857,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3249_6 - 5576.7936 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":6,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570963,
+                              "hlevel":4,
+                              "secondEntityId":1542858,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3250_6 - 1473.666 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":6,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           }
+                        ],
+                        "expanded":true,
+                        "groupingId":6,
+                        "parentGroupingId":null,
+                        "colorCode":"4_0",
+                        "iconCode":null,
+                        "appHierarchyConfigId":6
+                     },
+                     {  
+                        "entityId":null,
+                        "hlevel":4,
+                        "secondEntityId":null,
+                        "secondHlevel":null,
+                        "parentEntityId":494733,
+                        "parentHlevel":4,
+                        "details":"First House",
+                        "appContextId":null,
+                        "selected":null,
+                        "hierarchyDynamicDTOList":[  
+                           {  
+                              "entityId":570914,
+                              "hlevel":4,
+                              "secondEntityId":1542809,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3201_2 - 5094 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":2,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570915,
+                              "hlevel":4,
+                              "secondEntityId":1542810,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3202_2 - 3384 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":2,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570925,
+                              "hlevel":4,
+                              "secondEntityId":1542820,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3212_2 - 4032 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":2,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570930,
+                              "hlevel":4,
+                              "secondEntityId":1542825,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3217_2 - 12230 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":2,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570935,
+                              "hlevel":4,
+                              "secondEntityId":1542830,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3222_2 - 8036 RON Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":2,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570936,
+                              "hlevel":4,
+                              "secondEntityId":1542831,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3223_2 - 13176 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":2,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570937,
+                              "hlevel":4,
+                              "secondEntityId":1542832,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3224_2 - 2166 RON Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":2,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570938,
+                              "hlevel":4,
+                              "secondEntityId":1542833,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3225_2 - 1242 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":2,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570940,
+                              "hlevel":4,
+                              "secondEntityId":1542835,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3227_2 - 4668 RON Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":2,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570947,
+                              "hlevel":4,
+                              "secondEntityId":1542842,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3234_2 - 12768 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":2,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570961,
+                              "hlevel":4,
+                              "secondEntityId":1542856,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3248_2 - 1088 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":2,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           }
+                        ],
+                        "expanded":true,
+                        "groupingId":2,
+                        "parentGroupingId":null,
+                        "colorCode":"4_0",
+                        "iconCode":null,
+                        "appHierarchyConfigId":6
+                     },
+                     {  
+                        "entityId":null,
+                        "hlevel":4,
+                        "secondEntityId":null,
+                        "secondHlevel":null,
+                        "parentEntityId":494733,
+                        "parentHlevel":4,
+                        "details":"Mortgage",
+                        "appContextId":null,
+                        "selected":null,
+                        "hierarchyDynamicDTOList":[  
+                           {  
+                              "entityId":570917,
+                              "hlevel":4,
+                              "secondEntityId":1542812,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3204_5 - 1566 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":5,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570933,
+                              "hlevel":4,
+                              "secondEntityId":1542828,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3220_5 - 2110 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":5,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570934,
+                              "hlevel":4,
+                              "secondEntityId":1542829,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3221_5 - 1420 RON Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":5,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570945,
+                              "hlevel":4,
+                              "secondEntityId":1542840,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3232_5 - 464 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":5,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570946,
+                              "hlevel":4,
+                              "secondEntityId":1542841,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3233_5 - 5508 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":5,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           }
+                        ],
+                        "expanded":true,
+                        "groupingId":5,
+                        "parentGroupingId":null,
+                        "colorCode":"4_0",
+                        "iconCode":null,
+                        "appHierarchyConfigId":6
+                     },
+                     {  
+                        "entityId":null,
+                        "hlevel":4,
+                        "secondEntityId":null,
+                        "secondHlevel":null,
+                        "parentEntityId":494733,
+                        "parentHlevel":4,
+                        "details":"Auto Loan",
+                        "appContextId":null,
+                        "selected":null,
+                        "hierarchyDynamicDTOList":[  
+                           {  
+                              "entityId":570923,
+                              "hlevel":4,
+                              "secondEntityId":1542818,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3210_4 - 25 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":4,
+                              "colorCode":"4_2",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570931,
+                              "hlevel":4,
+                              "secondEntityId":1542826,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3218_4 - 205 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":4,
+                              "colorCode":"4_2",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570932,
+                              "hlevel":4,
+                              "secondEntityId":1542827,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3219_4 - 324 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":4,
+                              "colorCode":"4_2",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570943,
+                              "hlevel":4,
+                              "secondEntityId":1542838,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3230_4 - 426 RON Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":4,
+                              "colorCode":"4_2",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570951,
+                              "hlevel":4,
+                              "secondEntityId":1542846,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3238_4 - 85 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":4,
+                              "colorCode":"4_2",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           }
+                        ],
+                        "expanded":true,
+                        "groupingId":4,
+                        "parentGroupingId":null,
+                        "colorCode":"4_0",
+                        "iconCode":null,
+                        "appHierarchyConfigId":6
+                     },
+                     {  
+                        "entityId":null,
+                        "hlevel":4,
+                        "secondEntityId":null,
+                        "secondHlevel":null,
+                        "parentEntityId":494733,
+                        "parentHlevel":4,
+                        "details":"Overdraft",
+                        "appContextId":null,
+                        "selected":null,
+                        "hierarchyDynamicDTOList":[  
+                           {  
+                              "entityId":570920,
+                              "hlevel":4,
+                              "secondEntityId":1542815,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3207_7 - 764.6296 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":7,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570927,
+                              "hlevel":4,
+                              "secondEntityId":1542822,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3214_7 - 2472.604 RON Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":7,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570929,
+                              "hlevel":4,
+                              "secondEntityId":1542824,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3216_7 - 2273.1202 RON Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":7,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570941,
+                              "hlevel":4,
+                              "secondEntityId":1542836,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3228_7 - 1558.2971 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":7,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570954,
+                              "hlevel":4,
+                              "secondEntityId":1542849,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3241_7 - 1231.2096 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":7,
+                              "colorCode":"4_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           }
+                        ],
+                        "expanded":true,
+                        "groupingId":7,
+                        "parentGroupingId":null,
+                        "colorCode":"4_0",
+                        "iconCode":null,
+                        "appHierarchyConfigId":6
+                     },
+                     {  
+                        "entityId":null,
+                        "hlevel":4,
+                        "secondEntityId":null,
+                        "secondHlevel":null,
+                        "parentEntityId":494733,
+                        "parentHlevel":4,
+                        "details":"Personal Loan",
+                        "appContextId":null,
+                        "selected":null,
+                        "hierarchyDynamicDTOList":[  
+                           {  
+                              "entityId":570924,
+                              "hlevel":4,
+                              "secondEntityId":1542819,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3211_3 - 2016 RON Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":3,
+                              "colorCode":"4_2",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570939,
+                              "hlevel":4,
+                              "secondEntityId":1542834,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3226_3 - 1140 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":3,
+                              "colorCode":"4_2",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570942,
+                              "hlevel":4,
+                              "secondEntityId":1542837,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3229_3 - 1737 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":3,
+                              "colorCode":"4_2",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570944,
+                              "hlevel":4,
+                              "secondEntityId":1542839,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3231_3 - 948 EUR Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":3,
+                              "colorCode":"4_2",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570953,
+                              "hlevel":4,
+                              "secondEntityId":1542848,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3240_3 - 108 RON Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":3,
+                              "colorCode":"4_2",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570958,
+                              "hlevel":4,
+                              "secondEntityId":1542853,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3245_3 - 456 RON Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":3,
+                              "colorCode":"4_2",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570959,
+                              "hlevel":4,
+                              "secondEntityId":1542854,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3246_3 - 873 RON Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":3,
+                              "colorCode":"4_2",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           },
+                           {  
+                              "entityId":570960,
+                              "hlevel":4,
+                              "secondEntityId":1542855,
+                              "secondHlevel":31,
+                              "parentEntityId":494733,
+                              "parentHlevel":4,
+                              "details":"(Debtor) 3247_3 - 378 RON Active",
+                              "appContextId":9,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":false,
+                              "groupingId":null,
+                              "parentGroupingId":3,
+                              "colorCode":"4_2",
+                              "iconCode":null,
+                              "appHierarchyConfigId":3
+                           }
+                        ],
+                        "expanded":true,
+                        "groupingId":3,
+                        "parentGroupingId":null,
+                        "colorCode":"4_0",
+                        "iconCode":null,
+                        "appHierarchyConfigId":6
+                     }
+                  ],
+                  "expanded":true,
+                  "groupingId":null,
+                  "parentGroupingId":null,
+                  "colorCode":"4_0",
+                  "iconCode":null,
+                  "appHierarchyConfigId":5
+               },
+               {  
+                  "entityId":null,
+                  "hlevel":32,
+                  "secondEntityId":null,
+                  "secondHlevel":null,
+                  "parentEntityId":494733,
+                  "parentHlevel":2,
+                  "details":"guarantee",
+                  "appContextId":null,
+                  "selected":null,
+                  "hierarchyDynamicDTOList":[  
+                     {  
+                        "entityId":null,
+                        "hlevel":32,
+                        "secondEntityId":null,
+                        "secondHlevel":null,
+                        "parentEntityId":494733,
+                        "parentHlevel":32,
+                        "details":"Garantii banci si titluri de stat",
+                        "appContextId":null,
+                        "selected":null,
+                        "hierarchyDynamicDTOList":[  
+                           {  
+                              "entityId":1271,
+                              "hlevel":32,
+                              "secondEntityId":null,
+                              "secondHlevel":null,
+                              "parentEntityId":494733,
+                              "parentHlevel":32,
+                              "details":"Contragar.silent.banci-tari ctgA-EXT1271-11157 EUR",
+                              "appContextId":10,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":true,
+                              "groupingId":null,
+                              "parentGroupingId":2,
+                              "colorCode":"32_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":27
+                           }
+                        ],
+                        "expanded":true,
+                        "groupingId":2,
+                        "parentGroupingId":null,
+                        "colorCode":"32_1",
+                        "iconCode":null,
+                        "appHierarchyConfigId":26
+                     },
+                     {  
+                        "entityId":null,
+                        "hlevel":32,
+                        "secondEntityId":null,
+                        "secondHlevel":null,
+                        "parentEntityId":494733,
+                        "parentHlevel":32,
+                        "details":"Bilete la Ordin in ALB",
+                        "appContextId":null,
+                        "selected":null,
+                        "hierarchyDynamicDTOList":[  
+                           {  
+                              "entityId":1270,
+                              "hlevel":32,
+                              "secondEntityId":null,
+                              "secondHlevel":null,
+                              "parentEntityId":494733,
+                              "parentHlevel":32,
+                              "details":"BOalb suma scad fara protest PF-EXT1270-11157 EUR",
+                              "appContextId":10,
+                              "selected":null,
+                              "hierarchyDynamicDTOList":[  
+
+                              ],
+                              "expanded":true,
+                              "groupingId":null,
+                              "parentGroupingId":10,
+                              "colorCode":"32_0",
+                              "iconCode":null,
+                              "appHierarchyConfigId":27
+                           }
+                        ],
+                        "expanded":true,
+                        "groupingId":10,
+                        "parentGroupingId":null,
+                        "colorCode":"32_1",
+                        "iconCode":null,
+                        "appHierarchyConfigId":26
+                     }
+                  ],
+                  "expanded":false,
+                  "groupingId":null,
+                  "parentGroupingId":null,
+                  "colorCode":"32_1",
+                  "iconCode":"32_0",
+                  "appHierarchyConfigId":25
+               },
+               {  
+                  "entityId":null,
+                  "hlevel":12,
+                  "secondEntityId":null,
+                  "secondHlevel":null,
+                  "parentEntityId":494733,
+                  "parentHlevel":2,
+                  "details":"insolvency files",
+                  "appContextId":null,
+                  "selected":null,
+                  "hierarchyDynamicDTOList":[  
+                     {  
+                        "entityId":8258,
+                        "hlevel":12,
+                        "secondEntityId":null,
+                        "secondHlevel":null,
+                        "parentEntityId":494733,
+                        "parentHlevel":12,
+                        "details":"945733_1-252180.2769-RON",
+                        "appContextId":18,
+                        "selected":null,
+                        "hierarchyDynamicDTOList":[  
+
+                        ],
+                        "expanded":true,
+                        "groupingId":null,
+                        "parentGroupingId":null,
+                        "colorCode":"12_0",
+                        "iconCode":null,
+                        "appHierarchyConfigId":30
+                     }
+                  ],
+                  "expanded":true,
+                  "groupingId":null,
+                  "parentGroupingId":null,
+                  "colorCode":"12_0",
+                  "iconCode":"12_0",
+                  "appHierarchyConfigId":29
+               }
+            ],
+            "expanded":true,
+            "groupingId":null,
+            "parentGroupingId":null,
+            "colorCode":"2_0",
+            "iconCode":null,
+            "appHierarchyConfigId":2
+         }
+      ],
+      "expanded":true,
+      "groupingId":null,
+      "parentGroupingId":null,
+      "colorCode":"33_0",
+      "iconCode":null,
+      "appHierarchyConfigId":1
+   }
+];
+    public field:Object ={ dataSource: this.localData, id: 'details', text: 'details', child: 'hierarchyDynamicDTOList' };
+
+    public nodeSelected(data){
+      console.error(data);
+    }
+}
